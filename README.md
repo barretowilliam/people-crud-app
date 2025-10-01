@@ -85,12 +85,6 @@ A aplicação estará disponível em `http://localhost:3000`.
 
 ------------------------------------------------------------------------
 
-## 🌍 Deploy Online
-O projeto foi publicado em:  
-👉 [https://people-crud-app.vercel.app](https://people-crud-app.vercel.app) *(exemplo caso use Vercel/Netlify)*
-
-------------------------------------------------------------------------
-
 ## 🔒 Autenticação
 Este projeto **não utiliza autenticação**.  
 Caso fosse necessário, poderiam ser aplicados **JWT (JSON Web Token)** ou **OAuth2**, integrados com backend de usuários.
