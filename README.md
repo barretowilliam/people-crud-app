@@ -86,8 +86,12 @@ npm start
 O frontend ficará disponível em:  
 👉 `http://localhost:3000`
 
+```docs/readme
 ⚠️ O frontend consome os dados do backend rodando em `http://localhost:5002`.
-
+=======
+A aplicação estará disponível em `http://localhost:3000`.
+main
+```
 ------------------------------------------------------------------------
 
 ## 🔒 Autenticação
