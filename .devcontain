@@ -1,0 +1,16 @@
+{
+  "name": "People CRUD App",
+  "forwardPorts": [3000, 5000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend (React)",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    },
+    "5000": {
+      "label": "Backend (.NET API)",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  }
+}
