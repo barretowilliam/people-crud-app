@@ -1,0 +1,218 @@
+.App {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #32cd32, #1e90ff);
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  margin-top: 96px; 
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+form {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+}
+
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  grid-column: 1 / -1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #1e90ff;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+  background: #005bbb;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+li {
+  background: #f0f8ff;
+  color: #000;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões da lista */
+li button {
+  margin-left: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+li button:first-child {
+  background: #32cd32; /* verde Editar */
+}
+
+li button:last-child {
+  background: #ff4d4f; /* vermelho Excluir */
+}
+
+li button:hover {
+  opacity: 0.9;
+}
+
+/* header fixo */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 115, 211, 0.95);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.header img.logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Cabeçalhos de ordenação */
+.sort-header {
+  max-width: 900px;
+  margin: 0 auto 15px auto;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sort-header button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f0f8ff;
+  color: #1e90ff;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-header button:hover {
+  background: #dceeff;
+}
+
+.sort-header button.active {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.sort-header button.active::after {
+  content: attr(data-direction);
+  font-size: 0.85rem;
+}
+
+/* Paginação */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #f0f8ff;
+  color: #1e90ff;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background: #dceeff;
+}
+
+.pagination button.active {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* Campo de pesquisa */
+.search-box {
+  max-width: 400px;
+  margin: 0 auto 20px auto; /* centralizado com espaço inferior */
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
