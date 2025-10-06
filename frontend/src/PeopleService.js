@@ -1,6 +1,7 @@
+
 import axios from "axios";
 
-const API_URL = "https://miniature-xylophone-9457vx69xp6fppvx-5002.app.github.dev/api/pessoas";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const getPeople     = () => axios.get(API_URL);
 export const createPerson  = (person) => axios.post(API_URL, person);

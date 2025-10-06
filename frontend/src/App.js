@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getPeople, createPerson, updatePerson, deletePerson } from "./PeopleService";
 import "./App.css";
 
-// Utils
 function onlyLettersAndSpaces(str) {
   return str.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, " ").replace(/\s{2,}/g, " ").trim();
 }
@@ -47,14 +46,11 @@ function App() {
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
 
-  // paginação
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  // filtro
   const [search, setSearch] = useState("");
 
-  // ordenação
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
 
   useEffect(() => {
@@ -173,7 +169,6 @@ function App() {
     loadPeople();
   }
 
-  // Ordenação
   function handleSort(key) {
     let direction = "asc";
     if (sortConfig.key === key && sortConfig.direction === "asc") {
@@ -193,7 +188,6 @@ function App() {
     });
   }
 
-  // Filtro + Ordenação + Paginação
   const filtered = people.filter((p) =>
     capitalizeWords(p.nome).toLowerCase().includes(search.toLowerCase())
   );
@@ -213,7 +207,6 @@ function App() {
       <div className="App">
         <h1>Gerenciamento de Pessoas</h1>
 
-        {/* Formulário */}
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Nome" value={form.nome} onChange={handleNomeChange} required />
           <input type="number" placeholder="Idade" value={form.idade} onChange={handleIdadeChange} min={1} required />
@@ -250,7 +243,6 @@ function App() {
           <p>Nenhum registro cadastrado.</p>
         ) : (
           <>
-            {/* Campo de pesquisa agora fica junto da lista */}
             <div className="search-box">
               <input
                 type="text"
@@ -260,7 +252,6 @@ function App() {
               />
             </div>
 
-            {/* Cabeçalhos para ordenar */}
             <div className="sort-header">
               <button onClick={() => handleSort("nome")} className={sortConfig.key === "nome" ? "active" : ""}>
                 Nome {sortConfig.key === "nome" ? (sortConfig.direction === "asc" ? "↑" : "↓") : ""}
@@ -292,7 +283,6 @@ function App() {
               ))}
             </ul>
 
-            {/* Paginação */}
             <div className="pagination">
               <button onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))} disabled={currentPage === 1}>
                 Anterior
